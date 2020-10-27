@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>11</title>
+	<style>audio{width:50vw; height:150px;font-size: 340px;}</style>
+	<style>input{width:30vw; height: 60px;font-size: 34px;}</style>
+    <style>button{width:30vw; height: 60px;font-size: 34px;}</style>
+</head>
+<body>
+    <div>
+        <input onclick="startRecording()" type="button" value="录音" />
+        <input onclick="stopRecording()"  type="button" value="停止" />
+	</div>
+	<section class="sound-clips"></section>
+ 
+	<!-- <script type="text/javascript" src="HZRecorder.js"></script> -->
+	<script src="./HZRecorder.js"></script>
+ 
+ 
+    <script>
+ 
+        var recorder;
+ 
+        var audio = document.querySelector('audio');
+ 
+        function startRecording() {
+            HZRecorder.get(function (rec) {
+                recorder = rec;
+                recorder.start();
+            });
+        }
+ 
+        function stopRecording() {
+            recorder.stop();
+        }
+ 
+        // function playRecording() {
+        //     recorder.play(audio);
+		// }
+ 
+  
+    </script>
+ 
+</body>
+</html>

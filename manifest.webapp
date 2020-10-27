@@ -1,0 +1,19 @@
+{
+  "name": "Recorder_Test",
+  "description": "record your sounds!",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icons/icon200x200.png"
+  },
+  "developer": {
+    "name": "Kylin",
+    "url": "http://www.kylinos.com"
+  },
+  "permissions": {
+    "device-storage:sdcard": {"access": "readwrite"},
+    "audio-capture": {
+      "description": "Required to capture auido using getUserMedia()"
+     }
+  },
+  "type": "certified"
+}
